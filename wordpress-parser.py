@@ -2,10 +2,10 @@
 import xml.etree.ElementTree as ET
 import csv
 
-tree = ET.parse('/Users/johnproppe/Desktop/cxm-final.xml')
+tree = ET.parse('XML FILE PATH')
 root = tree.getroot()
 
-f = open('/Users/johnproppe/Desktop/cxm-posts-category.csv', 'w')
+f = open('CSV EXPORT FILE PATH', 'w')
 
 csvwriter = csv.writer(f)
 
@@ -26,4 +26,4 @@ for item in root.iter('item'):
 	csvwriter.writerow(row)
 f.close()
 
-tree.write('/Users/johnproppe/Desktop/cxm-final-cleaned.xml')
+tree.write('CLEANED OUTPUT XML FILE PATH')
